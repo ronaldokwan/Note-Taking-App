@@ -1,25 +1,53 @@
-'use strict';
-const {
-  Model
-} = require('sequelize');
+"use strict";
+const { Model } = require("sequelize");
 module.exports = (sequelize, DataTypes) => {
   class Note extends Model {
-    /**
-     * Helper method for defining associations.
-     * This method is not a part of Sequelize lifecycle.
-     * The `models/index` file will call this method automatically.
-     */
     static associate(models) {
-      // define association here
+      Note.belongsTo(models.User, {
+        foreignKey: "userId",
+      });
     }
   }
-  Note.init({
-    title: DataTypes.STRING,
-    content: DataTypes.STRING,
-    archived: DataTypes.BOOLEAN
-  }, {
-    sequelize,
-    modelName: 'Note',
-  });
+  Note.init(
+    {
+      title: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+          notNull: { msg: "Title cannot be null" },
+          notEmpty: { msg: "Title cannot be empty" },
+        },
+      },
+      content: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+        validate: {
+          notNull: { msg: "Content cannot be null" },
+          notEmpty: { msg: "Content cannot be empty" },
+        },
+      },
+      archived: {
+        type: DataTypes.BOOLEAN,
+        allowNull: false,
+        defaultValue: false, // Default to false if not explicitly set
+        validate: {
+          notNull: { msg: "Archived cannot be null" },
+          notEmpty: { msg: "Archived cannot be empty" },
+        },
+      },
+      userId: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        validate: {
+          notNull: { msg: "UserId cannot be null" },
+          isInt: { msg: "UserId must be an integer" },
+        },
+      },
+    },
+    {
+      sequelize,
+      modelName: "Note",
+    }
+  );
   return Note;
 };
