@@ -69,11 +69,12 @@ class Controller {
   }
   static async addNote(req, res, next) {
     try {
-      const { title, content } = req.body;
+      const { title, content, tag } = req.body;
       const userId = req.user.id;
       const data = await Note.create({
         title,
         content,
+        tag,
         userId,
       });
 
@@ -81,6 +82,7 @@ class Controller {
         id: data.id,
         title: data.title,
         content: data.content,
+        tag: data.tag,
         userId: data.userId,
       });
     } catch (error) {
@@ -90,13 +92,14 @@ class Controller {
   static async updateNote(req, res, next) {
     try {
       const id = req.params.id;
-      const { title, content } = req.body;
+      const { title, content, tag } = req.body;
 
       const data = await Note.findByPk(id);
       if (!data) throw { name: "Note not found" };
 
       data.title = title;
       data.content = content;
+      data.tag = tag;
       await data.save();
 
       res.status(200).json({ message: "Note has been updated" });

@@ -17,6 +17,10 @@ module.exports = {
         type: Sequelize.TEXT,
         allowNull: false,
       },
+      tag: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
       archived: {
         type: Sequelize.BOOLEAN,
         defaultValue: false, // Default to false if not explicitly set

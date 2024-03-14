@@ -26,6 +26,14 @@ module.exports = (sequelize, DataTypes) => {
           notEmpty: { msg: "Content cannot be empty" },
         },
       },
+      tag: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+        validate: {
+          notNull: { msg: "Tag cannot be null" },
+          notEmpty: { msg: "Tag cannot be empty" },
+        },
+      },
       archived: {
         type: DataTypes.BOOLEAN,
         allowNull: false,
