@@ -5,6 +5,7 @@ const { signToken } = require("../helpers/jwt");
 class Controller {
   static async register(req, res, next) {
     try {
+      console.log("bbb");
       const { username, email, password } = req.body;
       const data = await User.create({
         username,
@@ -69,7 +70,7 @@ class Controller {
   static async addNote(req, res, next) {
     try {
       const { title, content } = req.body;
-      const userId = req.id;
+      const userId = req.user.id;
       const data = await Note.create({
         title,
         content,

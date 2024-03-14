@@ -39,8 +39,8 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.INTEGER,
         allowNull: false,
         validate: {
-          notNull: { msg: "UserId cannot be null" },
-          isInt: { msg: "UserId must be an integer" },
+          notNull: { msg: "userId cannot be null" },
+          isInt: { msg: "userId must be an integer" },
         },
       },
     },

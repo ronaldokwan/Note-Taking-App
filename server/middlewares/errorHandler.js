@@ -21,6 +21,9 @@ async function errHandler(error, req, res, next) {
     case "Invalid email/password":
       res.status(401).json({ message: "Invalid email/password" });
       break;
+    case "You're not authorized":
+      res.status(403).json({ message: "You're not authorized" });
+      break;
     case "Note not found":
       res.status(404).json({ message: "Note not found" });
       break;
