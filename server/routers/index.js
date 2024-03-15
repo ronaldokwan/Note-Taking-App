@@ -19,5 +19,8 @@ router.put("/update-note/:id", authorization, Controller.updateNote);
 router.delete("/delete-note/:id", authorization, Controller.deleteNote);
 router.patch("/update-archived/:id", authorization, Controller.updateArchived);
 
+router.get("/anime", Controller.anime);
+router.get("/trivia", Controller.trivia);
+
 router.use(errHandler);
 module.exports = router;

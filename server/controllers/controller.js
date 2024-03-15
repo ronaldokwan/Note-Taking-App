@@ -1,6 +1,7 @@
 const { User, Note } = require("../models");
 const { comparePassword } = require("../helpers/bcrypt");
 const { signToken } = require("../helpers/jwt");
+const axios = require("axios");
 // google login
 const { OAuth2Client } = require("google-auth-library");
 const client = new OAuth2Client();
@@ -168,6 +169,49 @@ class Controller {
       await data.save();
 
       res.status(200).json({ message: "Note has been archived" });
+    } catch (error) {
+      next(error);
+    }
+  }
+  static async anime(req, res, next) {
+    const options = {
+      method: "GET",
+      url: `https://any-anime.p.rapidapi.com/v1/anime/gif/1`,
+      headers: {
+        "X-RapidAPI-Key": "065bb865fbmsh9869ccb03e0d80ap1fc860jsn903bdbd50c81",
+        "X-RapidAPI-Host": "any-anime.p.rapidapi.com",
+      },
+    };
+    try {
+      const response = await axios.request(options);
+      const data = response.data.images[0];
+      console.log(data);
+      res.status(200).json({ data });
+    } catch (error) {
+      next(error);
+    }
+  }
+  static async trivia(req, res, next) {
+    const axios = require("axios");
+    const num = Math.floor(Math.random() * 10) + 1;
+    const options = {
+      method: "GET",
+      url: `https://numbersapi.p.rapidapi.com/${num}/trivia`,
+      params: {
+        fragment: "true",
+        notfound: "floor",
+        json: "true",
+      },
+      headers: {
+        "X-RapidAPI-Key": "065bb865fbmsh9869ccb03e0d80ap1fc860jsn903bdbd50c81",
+        "X-RapidAPI-Host": "numbersapi.p.rapidapi.com",
+      },
+    };
+    try {
+      const response = await axios.request(options);
+      const text = response.data.text;
+      const number = response.data.number;
+      res.status(200).json({ text, number });
     } catch (error) {
       next(error);
     }
