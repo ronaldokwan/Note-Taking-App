@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { deleteNote, updateArchived, fetchNotes } from "../store/noteSlice";
-
+import Api from "../components/Api";
 const HomePage = () => {
   const dispatch = useDispatch();
   const { notes, loading, error } = useSelector((state) => state.notes);
@@ -29,6 +29,7 @@ const HomePage = () => {
 
   return (
     <div className="container">
+      <Api />
       <h1>My Notes</h1>
       <ul className="note-list">
         {notes.map((note) => (
