@@ -3,7 +3,6 @@ const { User } = require("../models");
 
 async function authentication(req, res, next) {
   try {
-    console.log("aaaa");
     const { authorization } = req.headers;
     if (!authorization) throw { name: "Invalid token" };
 
