@@ -96,7 +96,7 @@ export const updateNote = (id, body) => async (dispatch) => {
   }
 };
 
-export const deleteNote = (id) => async (dispatch) => {
+export const deleteNote = (id, body) => async (dispatch) => {
   try {
     await axios({
       method: "delete",
@@ -105,7 +105,11 @@ export const deleteNote = (id) => async (dispatch) => {
         Authorization: "Bearer " + localStorage.access_token,
       },
     });
-    dispatch(fetchNotes());
+    if (body.archived) {
+      dispatch(fetchArchived());
+    } else {
+      dispatch(fetchNotes());
+    }
   } catch (error) {
     Swal.fire({
       title: error.response.data.message,

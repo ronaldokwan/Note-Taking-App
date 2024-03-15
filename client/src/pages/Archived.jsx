@@ -12,7 +12,7 @@ const Archived = () => {
   }, [dispatch]);
 
   const deleteItem = (id) => {
-    dispatch(deleteNote(id));
+    dispatch(deleteNote(id, { archived: true }));
   };
 
   const archiveItem = (id) => {
@@ -43,8 +43,8 @@ const Archived = () => {
               >
                 Delete
               </button>
-              <Link to={`/edit-note/${note.id}`} className="btn btn-primary">
-                Edit
+              <Link to={`/update-note/${note.id}`} className="btn btn-primary">
+                Update
               </Link>
               <button
                 className="btn btn-warning"
