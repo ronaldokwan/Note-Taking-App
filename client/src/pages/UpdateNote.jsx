@@ -14,7 +14,7 @@ const UpdateNote = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const body = { title, content, tag };
-    dispatch(updateNote(body));
+    dispatch(updateNote(id, body));
     navigate("/");
   };
 

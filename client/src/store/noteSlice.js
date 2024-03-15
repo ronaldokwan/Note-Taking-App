@@ -86,7 +86,14 @@ export const addNote = (body) => async (dispatch) => {
 
 export const updateNote = (id, body) => async (dispatch) => {
   try {
-    await axios.put(`http://localhost:3000/update-note/${id}`, body);
+    await axios({
+      method: "put",
+      url: `http://localhost:3000/update-note/${id}`,
+      data: body,
+      headers: {
+        Authorization: "Bearer " + localStorage.access_token,
+      },
+    });
     dispatch(fetchNotes());
   } catch (error) {
     Swal.fire({

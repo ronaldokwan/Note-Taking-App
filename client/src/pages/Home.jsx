@@ -2,7 +2,10 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { deleteNote, updateArchived, fetchNotes } from "../store/noteSlice";
-import Api from "../components/Api";
+import AnimeApi from "../components/AnimeApi";
+import TriviaApi from "../components/TriviaApi";
+import "./HomePage.css"; // Import CSS file for styling
+
 const HomePage = () => {
   const dispatch = useDispatch();
   const { notes, loading, error } = useSelector((state) => state.notes);
@@ -29,14 +32,17 @@ const HomePage = () => {
 
   return (
     <div className="container">
-      <Api />
-      <h1>My Notes</h1>
+      <div className="header">
+        <AnimeApi />
+        <TriviaApi />
+      </div>
+      <h1 className="title">My Notes</h1>
       <ul className="note-list">
         {notes.map((note) => (
           <li key={note.id} className="note-item">
-            <h2>{note.title}</h2>
-            <p>{note.content}</p>
-            <p>Tag: {note.tag}</p>
+            <h2 className="note-title">{note.title}</h2>
+            <p className="note-content">{note.content}</p>
+            <p className="note-tag">Tag: {note.tag}</p>
             <div className="button-group">
               <button
                 className="btn btn-danger"
