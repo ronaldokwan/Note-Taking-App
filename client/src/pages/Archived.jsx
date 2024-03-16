@@ -50,7 +50,7 @@ const Archived = () => {
                 className="btn btn-warning"
                 onClick={() => archiveItem(note.id)}
               >
-                Archive
+                Unarchive
               </button>
             </div>
           </li>

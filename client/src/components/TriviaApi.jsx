@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-function TriviaApi() {
+const TriviaApi = () => {
   const [data, setData] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -27,18 +27,18 @@ function TriviaApi() {
   }, []);
 
   if (isLoading) {
-    return <div>Loading...</div>;
+    return <div>Loading Trivia...</div>;
   }
 
   return (
-    <>
+    <div className="api-content">
       {data && (
         <div>
           {data.number} is {data.text}
         </div>
       )}
-    </>
+    </div>
   );
-}
+};
 
 export default TriviaApi;
