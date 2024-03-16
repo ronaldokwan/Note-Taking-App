@@ -6,7 +6,7 @@ import { useNavigate, Link } from "react-router-dom";
 function Register() {
   const navigate = useNavigate();
   const [input, setInput] = useState({
-    fullName: "",
+    username: "",
     email: "",
     password: "",
   });
@@ -51,17 +51,17 @@ function Register() {
           <div className="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
             <form onSubmit={handleSubmit}>
               <h1>HackCrypto</h1>
-              <label className="form-label" htmlFor="fullName">
+              <label className="form-label" htmlFor="username">
                 Full Name
               </label>
               <div className="form-outline mb-4">
                 <input
                   type="text"
-                  id="fullName"
+                  id="username"
                   className="form-control form-control-lg"
-                  name="fullName"
+                  name="username"
                   onChange={handleInputChange}
-                  value={input.fullName}
+                  value={input.username}
                 />
               </div>
               <label className="form-label" htmlFor="email">
