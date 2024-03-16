@@ -1,0 +1,58 @@
+[
+  {
+    "title": "Important Meeting Notes",
+    "content": "Meeting with the team on [DATE]. Discussed project progress, deadlines, and next steps. Key takeaways: [list of key points]",
+    "archived": false,
+    "tag": "notes",
+    "userId": 1
+  },
+  {
+    "title": "Grocery List",
+    "content": "* Milk\n* Bread\n* Eggs\n* Fruits and vegetables",
+    "archived": false,
+    "tag": "groceries",
+    "userId": 1
+  },
+  {
+    "title": "Project Ideas",
+    "content": "Brainstorming new project ideas. Some potential options include: [list of ideas]",
+    "archived": true,
+    "tag": "notes",
+    "userId": 1
+  },
+  {
+    "title": "Weekend Plans",
+    "content": "Planning activities for the upcoming weekend. Considering [list of options]",
+    "archived": true,
+    "tag": "plans",
+    "userId": 1
+  },
+  {
+    "title": "Movie Recommendations",
+    "content": "A list of movies to watch: [list of movie titles]",
+    "archived": false,
+    "tag": "movies",
+    "userId": 2
+  },
+  {
+    "title": "Book Wishlist",
+    "content": "Books I'd like to read in the near future: [list of book titles]",
+    "archived": false,
+    "tag": "books",
+    "userId": 2
+  },
+  {
+    "title": "Travel Ideas",
+    "content": "Researching potential travel destinations for the next vacation. Considering: [list of locations]",
+    "archived": true,
+    "tag": "notes",
+    "userId": 2
+  },
+  {
+    "title": "Learning Goals",
+    "content": "Setting learning goals for the next month. Aiming to learn more about [list of topics]",
+    "archived": true,
+    "tag": "notes",
+    "userId": 2
+  }
+]
