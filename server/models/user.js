@@ -34,6 +34,9 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false, // Google, GitHub, manual
         defaultValue: "manual",
       },
+      donated: {
+        type: DataTypes.STRING,
+      },
     },
     {
       sequelize,

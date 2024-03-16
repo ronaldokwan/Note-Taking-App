@@ -22,5 +22,8 @@ router.patch("/update-archived/:id", authorization, Controller.updateArchived);
 router.get("/anime", Controller.anime);
 router.get("/trivia", Controller.trivia);
 
+router.get("/payment", Controller.payment);
+router.patch("/upgrade", Controller.upgrade);
+
 router.use(errHandler);
 module.exports = router;

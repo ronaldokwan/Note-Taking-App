@@ -2,35 +2,32 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable("Users", {
+    await queryInterface.createTable("Orders", {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER,
       },
-      username: {
+      orderId: {
         type: Sequelize.STRING,
-        allowNull: true,
       },
-      email: {
-        type: Sequelize.STRING,
-        allowNull: false,
-        validate: {
-          isEmail: true,
+      userId: {
+        type: Sequelize.INTEGER,
+        references: {
+          model: "Users",
+          key: "id",
         },
       },
-      password: {
+      amount: {
         type: Sequelize.STRING,
-        allowNull: true, // Optional for social logins
       },
-      provider: {
+      status: {
         type: Sequelize.STRING,
-        allowNull: false, // Google, GitHub, manual
-        defaultValue: "manual",
+        defaultValue: "pending",
       },
-      donated: {
-        type: Sequelize.STRING,
+      paidDate: {
+        type: Sequelize.DATE,
       },
       createdAt: {
         allowNull: false,
@@ -43,6 +40,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable("Users");
+    await queryInterface.dropTable("Orders");
   },
 };
