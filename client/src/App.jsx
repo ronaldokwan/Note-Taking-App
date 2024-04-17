@@ -1,17 +1,17 @@
 import { Provider } from "react-redux";
-import Login from "./pages/Login";
-import Register from "./pages/Register";
-import Home from "./pages/Home";
-import AddNote from "./pages/AddNote";
-import UpdateNote from "./pages/UpdateNote";
-import MainLayout from "./components/MainLayout";
-import store from "./store/store";
 import {
   createBrowserRouter,
   redirect,
   RouterProvider,
 } from "react-router-dom";
+import MainLayout from "./components/MainLayout";
+import AddNote from "./pages/AddNote";
 import Archived from "./pages/Archived";
+import Home from "./pages/Home";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import UpdateNote from "./pages/UpdateNote";
+import store from "./store/store";
 
 const router = createBrowserRouter([
   {

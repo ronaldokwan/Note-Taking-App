@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { deleteNote, updateArchived, fetchArchived } from "../store/noteSlice";
+import { deleteNote, fetchArchived, updateArchived } from "../store/noteSlice";
 
 const Archived = () => {
   const dispatch = useDispatch();

@@ -1,7 +1,7 @@
-import { useState } from "react";
 import axios from "axios";
+import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
-import { useNavigate, Link } from "react-router-dom";
 
 function Register() {
   const navigate = useNavigate();
@@ -100,7 +100,7 @@ function Register() {
 
               <span>
                 <Link to="/login" className="btn btn-primary btn-lg btn-block">
-                  Login
+                  Back to Login
                 </Link>
               </span>
             </form>

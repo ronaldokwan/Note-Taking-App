@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { addNote } from "../store/noteSlice";
 import { useNavigate } from "react-router-dom";
+import { addNote } from "../store/noteSlice";
 
 const AddNote = () => {
   const navigate = useNavigate();

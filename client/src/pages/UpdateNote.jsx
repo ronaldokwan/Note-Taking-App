@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { updateNote } from "../store/noteSlice";
 import { useNavigate, useParams } from "react-router-dom";
+import { updateNote } from "../store/noteSlice";
 
 const UpdateNote = () => {
   const { id } = useParams();
@@ -73,7 +73,7 @@ const UpdateNote = () => {
           />
         </div>
         <button type="submit" className="btn btn-primary">
-          Add Note
+          Update Note
         </button>
       </form>
     </div>

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1710596959035" clover="3.2.0">
-  <project timestamp="1710596959036" name="All files">
+<coverage generated="1710750322463" clover="3.2.0">
+  <project timestamp="1710750322463" name="All files">
     <metrics statements="252" coveredstatements="216" conditionals="72" coveredconditionals="45" methods="33" coveredmethods="30" elements="357" coveredelements="291" complexity="0" loc="252" ncloc="252" packages="6" files="12" classes="12"/>
     <package name="server">
       <metrics statements="11" coveredstatements="11" conditionals="2" coveredconditionals="1" methods="0" coveredmethods="0"/>
-      <file name="app.js" path="C:\Users\ronal\Desktop\hacktiv8\phase2\week3\Note-Taking-App\server\app.js">
+      <file name="app.js" path="C:\Users\ronal\Desktop\hacktiv8\phase2\week4\Note-Taking-App\server\app.js">
         <metrics statements="11" coveredstatements="11" conditionals="2" coveredconditionals="1" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="cond" truecount="1" falsecount="1"/>
         <line num="2" count="1" type="stmt"/>
@@ -21,7 +21,7 @@
     </package>
     <package name="server.controllers">
       <metrics statements="123" coveredstatements="94" conditionals="34" coveredconditionals="21" methods="16" coveredmethods="13"/>
-      <file name="controller.js" path="C:\Users\ronal\Desktop\hacktiv8\phase2\week3\Note-Taking-App\server\controllers\controller.js">
+      <file name="controller.js" path="C:\Users\ronal\Desktop\hacktiv8\phase2\week4\Note-Taking-App\server\controllers\controller.js">
         <metrics statements="123" coveredstatements="94" conditionals="34" coveredconditionals="21" methods="16" coveredmethods="13"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -150,14 +150,14 @@
     </package>
     <package name="server.helpers">
       <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
-      <file name="bcrypt.js" path="C:\Users\ronal\Desktop\hacktiv8\phase2\week3\Note-Taking-App\server\helpers\bcrypt.js">
+      <file name="bcrypt.js" path="C:\Users\ronal\Desktop\hacktiv8\phase2\week4\Note-Taking-App\server\helpers\bcrypt.js">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <line num="1" count="1" type="stmt"/>
         <line num="4" count="2" type="stmt"/>
         <line num="7" count="2" type="stmt"/>
         <line num="10" count="1" type="stmt"/>
       </file>
-      <file name="jwt.js" path="C:\Users\ronal\Desktop\hacktiv8\phase2\week3\Note-Taking-App\server\helpers\jwt.js">
+      <file name="jwt.js" path="C:\Users\ronal\Desktop\hacktiv8\phase2\week4\Note-Taking-App\server\helpers\jwt.js">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -168,7 +168,7 @@
     </package>
     <package name="server.middlewares">
       <metrics statements="46" coveredstatements="40" conditionals="24" coveredconditionals="15" methods="3" coveredmethods="3"/>
-      <file name="authentication.js" path="C:\Users\ronal\Desktop\hacktiv8\phase2\week3\Note-Taking-App\server\middlewares\authentication.js">
+      <file name="authentication.js" path="C:\Users\ronal\Desktop\hacktiv8\phase2\week4\Note-Taking-App\server\middlewares\authentication.js">
         <metrics statements="15" coveredstatements="15" conditionals="8" coveredconditionals="5" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -186,7 +186,7 @@
         <line num="21" count="6" type="stmt"/>
         <line num="25" count="1" type="stmt"/>
       </file>
-      <file name="authorization.js" path="C:\Users\ronal\Desktop\hacktiv8\phase2\week3\Note-Taking-App\server\middlewares\authorization.js">
+      <file name="authorization.js" path="C:\Users\ronal\Desktop\hacktiv8\phase2\week4\Note-Taking-App\server\middlewares\authorization.js">
         <metrics statements="8" coveredstatements="8" conditionals="4" coveredconditionals="2" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="4" count="6" type="stmt"/>
@@ -197,7 +197,7 @@
         <line num="10" count="3" type="stmt"/>
         <line num="14" count="1" type="stmt"/>
       </file>
-      <file name="errorHandler.js" path="C:\Users\ronal\Desktop\hacktiv8\phase2\week3\Note-Taking-App\server\middlewares\errorHandler.js">
+      <file name="errorHandler.js" path="C:\Users\ronal\Desktop\hacktiv8\phase2\week4\Note-Taking-App\server\middlewares\errorHandler.js">
         <metrics statements="23" coveredstatements="17" conditionals="12" coveredconditionals="8" methods="1" coveredmethods="1"/>
         <line num="2" count="16" type="cond" truecount="8" falsecount="4"/>
         <line num="5" count="1" type="stmt"/>
@@ -226,7 +226,7 @@
     </package>
     <package name="server.models">
       <metrics statements="41" coveredstatements="40" conditionals="12" coveredconditionals="8" methods="10" coveredmethods="10"/>
-      <file name="index.js" path="C:\Users\ronal\Desktop\hacktiv8\phase2\week3\Note-Taking-App\server\models\index.js">
+      <file name="index.js" path="C:\Users\ronal\Desktop\hacktiv8\phase2\week4\Note-Taking-App\server\models\index.js">
         <metrics statements="21" coveredstatements="20" conditionals="10" coveredconditionals="7" methods="3" coveredmethods="3"/>
         <line num="3" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
@@ -250,7 +250,7 @@
         <line num="41" count="1" type="stmt"/>
         <line num="43" count="1" type="stmt"/>
       </file>
-      <file name="note.js" path="C:\Users\ronal\Desktop\hacktiv8\phase2\week3\Note-Taking-App\server\models\note.js">
+      <file name="note.js" path="C:\Users\ronal\Desktop\hacktiv8\phase2\week4\Note-Taking-App\server\models\note.js">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -258,7 +258,7 @@
         <line num="11" count="1" type="stmt"/>
         <line num="60" count="1" type="stmt"/>
       </file>
-      <file name="order.js" path="C:\Users\ronal\Desktop\hacktiv8\phase2\week3\Note-Taking-App\server\models\order.js">
+      <file name="order.js" path="C:\Users\ronal\Desktop\hacktiv8\phase2\week4\Note-Taking-App\server\models\order.js">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -266,7 +266,7 @@
         <line num="9" count="1" type="stmt"/>
         <line num="22" count="1" type="stmt"/>
       </file>
-      <file name="user.js" path="C:\Users\ronal\Desktop\hacktiv8\phase2\week3\Note-Taking-App\server\models\user.js">
+      <file name="user.js" path="C:\Users\ronal\Desktop\hacktiv8\phase2\week4\Note-Taking-App\server\models\user.js">
         <metrics statements="10" coveredstatements="10" conditionals="2" coveredconditionals="1" methods="3" coveredmethods="3"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -282,7 +282,7 @@
     </package>
     <package name="server.routers">
       <metrics statements="22" coveredstatements="22" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="index.js" path="C:\Users\ronal\Desktop\hacktiv8\phase2\week3\Note-Taking-App\server\routers\index.js">
+      <file name="index.js" path="C:\Users\ronal\Desktop\hacktiv8\phase2\week4\Note-Taking-App\server\routers\index.js">
         <metrics statements="22" coveredstatements="22" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>

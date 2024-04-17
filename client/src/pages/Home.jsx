@@ -1,9 +1,9 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { deleteNote, updateArchived, fetchNotes } from "../store/noteSlice";
 import AnimeApi from "../components/AnimeApi";
 import TriviaApi from "../components/TriviaApi";
+import { deleteNote, fetchNotes, updateArchived } from "../store/noteSlice";
 import "./HomePage.css";
 
 const HomePage = () => {

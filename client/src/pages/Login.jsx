@@ -1,9 +1,10 @@
+/* eslint-disable react/no-unescaped-entities */
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable no-undef */
-import { useEffect, useState } from "react";
 import axios from "axios";
+import { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
-import { useNavigate, Link } from "react-router-dom";
 
 function Login() {
   const navigate = useNavigate();
@@ -111,7 +112,7 @@ function Login() {
                   to="/register"
                   className="btn btn-primary btn-lg btn-block"
                 >
-                  Register
+                  Don't have account?
                 </Link>
               </span>
             </form>
