@@ -155,7 +155,7 @@ $ npm run dev
 
 5. The client will be running on `http://localhost:5173`.
 
-## Usage
+## Viewing the Application
 
 After starting both the server and the client, you can use the application by navigating to `http://localhost:5173` in your web browser.
 
