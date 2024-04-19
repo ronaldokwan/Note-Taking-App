@@ -28,13 +28,13 @@
 
 1. Clone the repository:
 
-```bash
+```
 $ git clone <repository-url>
 ```
 
 2. Navigate to the project directory:
 
-```bash
+```
 $ cd Note-Taking-App
 ```
 
@@ -44,13 +44,13 @@ $ cd Note-Taking-App
 
 1. Navigate to the server directory:
 
-```bash
+```
 $ cd server
 ```
 
 2. Install the dependencies:
 
-```bash
+```
 $ npm install
 ```
 
@@ -93,25 +93,25 @@ DATABASE_URL=your_database_url
 
 4. Create a PostgreSQL database for development
 
-```bash
+```
 $ npx sequelize-cli db:create
 ```
 
 5. Run the migrations
 
-```bash
+```
 $ npx sequelize-cli db:migrate
 ```
 
 6. Seed the database
 
-```bash
+```
 $ npx sequelize-cli db:seed:all
 ```
 
 7. Start the server:
 
-```bash
+```
 $ npm start
 ```
 
@@ -121,7 +121,7 @@ $ npm start
 
 The server has unit tests written with Jest. To run the tests, use the following command:
 
-```bash
+```
 $ npm test
 ```
 
@@ -131,13 +131,13 @@ $ npm test
 
 1. Navigate to the client directory:
 
-```bash
+```
 $ cd client
 ```
 
 2. Install the dependencies:
 
-```bash
+```
 $ npm install
 ```
 
@@ -149,11 +149,15 @@ VITE_BASE_URL=http://localhost:5173
 
 4. Start the client:
 
-```bash
+```
 $ npm run dev
 ```
 
-5. The client will be running on `http://localhost:5173`.
+5. The client will be running on
+
+```
+http://localhost:5173
+```
 
 ## Viewing the Application
 
