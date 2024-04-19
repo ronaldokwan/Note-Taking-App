@@ -154,7 +154,7 @@ VITE_BASE_URL=your_server_base_url # default: http://localhost:3000
 
 4. Start the client:
 
-```
+```bash
 $ npm run dev
 ```
 
