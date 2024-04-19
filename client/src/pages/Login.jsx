@@ -27,7 +27,7 @@ function Login() {
     try {
       const { data } = await axios({
         method: "POST",
-        url: "http://localhost:3000/login",
+        url: `${import.meta.env.VITE_BASE_URL}/login`,
         data: input,
       });
       localStorage.access_token = data.access_token;
@@ -41,9 +41,12 @@ function Login() {
     }
   }
   async function handleCredentialResponse(response) {
-    const { data } = await axios.post("http://localhost:3000/google-login", {
-      google_token: response.credential,
-    });
+    const { data } = await axios.post(
+      `${import.meta.env.VITE_BASE_URL}/google-login`,
+      {
+        google_token: response.credential,
+      }
+    );
     console.log(data);
     localStorage.access_token = data.access_token;
     navigate("/");

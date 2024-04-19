@@ -8,7 +8,7 @@ function AnimeApi() {
     try {
       const { data } = await axios({
         method: "get",
-        url: "http://localhost:3000/anime",
+        url: `${import.meta.env.VITE_BASE_URL}/anime`,
         headers: {
           Authorization: "Bearer " + localStorage.access_token,
         },

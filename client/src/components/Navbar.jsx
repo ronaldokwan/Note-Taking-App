@@ -8,16 +8,19 @@ function Navbar() {
     var payButton = document.getElementById("pay-button");
     payButton.addEventListener("click", async function () {
       // Trigger snap popup. @TODO: Replace TRANSACTION_TOKEN_HERE with your transaction token
-      const { data } = await axios.get("http://localhost:3000/payment", {
-        headers: {
-          Authorization: `Bearer ${localStorage.getItem("access_token")}`,
-        },
-      });
+      const { data } = await axios.get(
+        `${import.meta.env.VITE_BASE_URL}/payment`,
+        {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("access_token")}`,
+          },
+        }
+      );
       window.snap.pay(data.transactionToken, {
         onSuccess: async function (result) {
           console.log(result);
           await axios.patch(
-            "http://localhost:3000/upgrade",
+            `${import.meta.env.VITE_BASE_URL}/upgrade`,
             {
               orderId: data.orderId,
             },

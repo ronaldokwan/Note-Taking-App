@@ -34,7 +34,7 @@ export const fetchNotes = () => async (dispatch) => {
   try {
     const { data } = await axios({
       method: "get",
-      url: "http://localhost:3000/",
+      url: `${import.meta.env.VITE_BASE_URL}/`,
       headers: {
         Authorization: "Bearer " + localStorage.access_token,
       },
@@ -52,7 +52,7 @@ export const fetchArchived = () => async (dispatch) => {
   try {
     const { data } = await axios({
       method: "get",
-      url: "http://localhost:3000/archived",
+      url: `${import.meta.env.VITE_BASE_URL}/archived`,
       headers: {
         Authorization: "Bearer " + localStorage.access_token,
       },
@@ -69,7 +69,7 @@ export const addNote = (body) => async (dispatch) => {
   try {
     await axios({
       method: "post",
-      url: "http://localhost:3000/add-note",
+      url: `${import.meta.env.VITE_BASE_URL}/add-note`,
       data: body,
       headers: {
         Authorization: "Bearer " + localStorage.access_token,
@@ -88,7 +88,7 @@ export const updateNote = (id, body) => async (dispatch) => {
   try {
     await axios({
       method: "put",
-      url: `http://localhost:3000/update-note/${id}`,
+      url: `${import.meta.env.VITE_BASE_URL}/update-note/${id}`,
       data: body,
       headers: {
         Authorization: "Bearer " + localStorage.access_token,
@@ -107,7 +107,7 @@ export const deleteNote = (id, body) => async (dispatch) => {
   try {
     await axios({
       method: "delete",
-      url: `http://localhost:3000/delete-note/${id}`,
+      url: `${import.meta.env.VITE_BASE_URL}/delete-note/${id}`,
       headers: {
         Authorization: "Bearer " + localStorage.access_token,
       },
@@ -129,7 +129,7 @@ export const updateArchived = (id, body) => async (dispatch) => {
   try {
     await axios({
       method: "patch",
-      url: `http://localhost:3000/update-archived/${id}`,
+      url: `${import.meta.env.VITE_BASE_URL}/update-archived/${id}`,
       data: body,
       headers: {
         Authorization: "Bearer " + localStorage.access_token,

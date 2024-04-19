@@ -59,8 +59,7 @@ class Controller {
       const { google_token } = req.body;
       const ticket = await client.verifyIdToken({
         idToken: google_token,
-        audience:
-          "1012248528478-f2jn6iljb8d62k7q00i79v6piqp4km1b.apps.googleusercontent.com",
+        audience: process.env.GOOGLE_CLIENT_ID,
       });
       const { email, name } = ticket.getPayload();
       const [user, created] = await User.findOrCreate({
@@ -179,8 +178,8 @@ class Controller {
       method: "GET",
       url: `https://any-anime.p.rapidapi.com/v1/anime/gif/1`,
       headers: {
-        "X-RapidAPI-Key": "065bb865fbmsh9869ccb03e0d80ap1fc860jsn903bdbd50c81",
-        "X-RapidAPI-Host": "any-anime.p.rapidapi.com",
+        "X-RapidAPI-Key": process.env.ANIME_API_KEY,
+        "X-RapidAPI-Host": process.env.ANIME_API_HOST,
       },
     };
     try {
@@ -204,8 +203,8 @@ class Controller {
         json: "true",
       },
       headers: {
-        "X-RapidAPI-Key": "065bb865fbmsh9869ccb03e0d80ap1fc860jsn903bdbd50c81",
-        "X-RapidAPI-Host": "numbersapi.p.rapidapi.com",
+        "X-RapidAPI-Key": process.env.TRIVIA_API_KEY,
+        "X-RapidAPI-Host": process.env.TRIVIA_API_HOST,
       },
     };
     try {
