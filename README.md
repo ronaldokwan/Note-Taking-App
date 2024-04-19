@@ -154,8 +154,8 @@ VITE_BASE_URL=your_server_base_url # default: http://localhost:3000
 
 4. Start the client:
 
-```markdown
-&#36; npm run dev
+```
+$ npm run dev
 ```
 
 5. The client will be running on
@@ -177,3 +177,6 @@ After starting both the server and the client, you can use the application by na
 
 - Email: user2@example.com
 - Password: qwerty
+
+<pre><code>FOO = &#36;(BAR)
+</code></pre>
