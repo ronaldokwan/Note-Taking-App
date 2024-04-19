@@ -28,14 +28,14 @@
 
 1. Clone the repository:
 
-```
-$ git clone <repository-url>
+```console
+git clone <repository-url>
 ```
 
 2. Navigate to the project directory:
 
-```
-$ cd Note-Taking-App
+```console
+cd Note-Taking-App
 ```
 
 ## Server
@@ -44,14 +44,14 @@ $ cd Note-Taking-App
 
 1. Navigate to the server directory:
 
-```
-$ cd server
+```console
+cd server
 ```
 
 2. Install the dependencies:
 
-```
-$ npm install
+```console
+npm install
 ```
 
 3. Create a `.env` file in the server directory with the following content:
@@ -93,31 +93,31 @@ DATABASE_URL=your_database_url
 
 4. Create a PostgreSQL database for development
 
-```
-$ npx sequelize-cli db:create
+```console
+npx sequelize-cli db:create
 ```
 
 5. Run the migrations
 
-```
-$ npx sequelize-cli db:migrate
+```console
+npx sequelize-cli db:migrate
 ```
 
 6. Seed the database
 
-```
-$ npx sequelize-cli db:seed:all
+```console
+npx sequelize-cli db:seed:all
 ```
 
 7. Start the server:
 
-```
-$ npm start
+```console
+npm start
 ```
 
 8. The server will be running on
 
-```
+```console
 http://localhost:3000
 ```
 
@@ -125,8 +125,8 @@ http://localhost:3000
 
 The server has unit tests written with Jest. To run the tests, use the following command:
 
-```
-$ npm test
+```console
+npm test
 ```
 
 ## Client
@@ -135,14 +135,14 @@ $ npm test
 
 1. Navigate to the client directory:
 
-```
-$ cd client
+```console
+cd client
 ```
 
 2. Install the dependencies:
 
-```
-$ npm install
+```console
+npm install
 ```
 
 3. Create a `.env` file in the client directory with the following content:
@@ -154,13 +154,13 @@ VITE_BASE_URL=your_server_base_url # default: http://localhost:3000
 
 4. Start the client:
 
-```
-$ npm run dev
+```console
+npm run dev
 ```
 
 5. The client will be running on
 
-```
+```console
 http://localhost:5173
 ```
 
@@ -177,7 +177,3 @@ After starting both the server and the client, you can use the application by na
 
 - Email: user2@example.com
 - Password: qwerty
-
-```shell
-npm run dev
-```
