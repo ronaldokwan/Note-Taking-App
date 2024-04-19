@@ -179,5 +179,5 @@ After starting both the server and the client, you can use the application by na
 - Password: qwerty
 
 ```console
-npm run dev
+$ npm run dev
 ```
