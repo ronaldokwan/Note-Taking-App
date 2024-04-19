@@ -178,6 +178,6 @@ After starting both the server and the client, you can use the application by na
 - Email: user2@example.com
 - Password: qwerty
 
-```bash
+```shell
 npm run dev
 ```
