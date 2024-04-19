@@ -56,9 +56,9 @@ $ npm install
 
 3. Create a `.env` file in the server directory with the following content:
 
-```
+```dosini
 # Express Server
-PORT=your_port
+PORT=your_port # default: 3000
 JWT_SECRET=your_jwt_secret
 
 # Midtrans Server Key
@@ -147,8 +147,9 @@ $ npm install
 
 3. Create a `.env` file in the client directory with the following content:
 
-```
-VITE_BASE_URL=http://localhost:5173
+```dosini
+# React Client
+VITE_BASE_URL=your_server_base_url # default: http://localhost:3000
 ```
 
 4. Start the client:
