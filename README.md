@@ -115,7 +115,11 @@ $ npx sequelize-cli db:seed:all
 $ npm start
 ```
 
-8. The server will be running on `http://localhost:3000`.
+8. The server will be running on
+
+```
+http://localhost:3000
+```
 
 ### Testing
 
