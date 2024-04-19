@@ -115,6 +115,8 @@ $ npx sequelize-cli db:seed:all
 $ npm start
 ```
 
+8. The server will be running on `http://localhost:3000`.
+
 ### Testing
 
 The server has unit tests written with Jest. To run the tests, use the following command:
@@ -139,13 +141,19 @@ $ cd client
 $ npm install
 ```
 
-3. Start the client:
+3. Create a `.env` file in the client directory with the following content:
+
+```
+VITE_BASE_URL=http://localhost:5173
+```
+
+4. Start the client:
 
 ```bash
 $ npm run dev
 ```
 
-4. The client will be running on `http://localhost:5173`.
+5. The client will be running on `http://localhost:5173`.
 
 ## Usage
 
