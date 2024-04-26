@@ -1,5 +1,7 @@
 # Note-Taking-App Documentation
 
+[API Documentation](./API.md)
+
 ![note](./images/note.png)
 
 - Server = Express, Sequelize, PostgreSQL, Jest
