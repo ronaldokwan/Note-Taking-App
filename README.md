@@ -1,5 +1,7 @@
 # Note-Taking-App Documentation
 
+![note](./images/note.png)
+
 - Server = Express, Sequelize, PostgreSQL, Jest
 - Client = React, Redux, Bootstrap
 - 3rd party API = RapidAPI, Midtrans, Google OAuth
